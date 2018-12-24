@@ -34,8 +34,10 @@ USER 1001
 
 # TODO: Set the default port for applications built using this image
 EXPOSE 8200
+EXPOSE 80
 
 ENV VAULT_DEV_LISTEN_ADDRESS "0.0.0.0:8200"
+ENV VAULT_API_ADDR "0.0.0.0:80"
 
 # TODO: Set the default CMD for the image
 CMD ["./vault", "server", "--dev"]
