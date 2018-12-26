@@ -19,7 +19,7 @@ RUN yum install -y unzip && yum clean all -y
 
 # TODO (optional): Copy the builder files into /opt/app-root
 # COPY ./<builder_folder>/ /opt/app-root/
-RUN curl https://releases.hashicorp.com/vault/0.11.6/vault_0.11.6_linux_amd64.zip > vault.zip && unzip vault.zip && chmod +x vault && rm vault.zip
+RUN curl https://releases.hashicorp.com/vault/1.0.1/vault_1.0.1_linux_amd64.zip > vault.zip && unzip vault.zip && chmod +x vault && rm vault.zip
 
 
 # TODO: Copy the S2I scripts to /usr/libexec/s2i, since openshift/base-centos7 image sets io.openshift.s2i.scripts-url label that way, or update that label
